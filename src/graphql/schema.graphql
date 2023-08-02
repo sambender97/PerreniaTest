@@ -1,0 +1,33 @@
+type Contact {
+	id: ID!
+	name: String
+	phone: String
+	email: String
+}
+
+type ContactDirectory {
+	contacts: [Contact]
+	nextToken: String
+}
+
+input ContactInput {
+	name: String
+	phone: String
+	email: String
+}
+
+type Mutation {
+	createContact(newContact: ContactInput): Contact!
+	updateContact(id: ID!, input: ContactInput): Contact!
+	deleteContact(id: ID!): Contact!
+}
+
+type Query {
+	getAllContacts(limit: Int, nextToken: String): ContactDirectory
+	getContactById(id: ID!): Contact
+}
+
+schema {
+	query: Query
+	mutation: Mutation
+}

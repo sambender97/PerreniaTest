@@ -1,0 +1,79 @@
+// styles/ContactCard.module.scss
+.ContactCard {
+    /* Center content horizontally and vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* Your existing styles for the ContactCard component */
+    padding: 20px;
+    border: 10px solid #ccc;
+    background-color: #f9f9f94f;
+
+     /* Styles for forms */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px; /* Add some spacing between the ContactCard content and the form */
+    width: 100%; /* Set the form width to 100% of the ContactCard container */
+  }
+
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+
+  }
+
+  input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+
+  }
+  
+  .ContactCard h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Add margin to create space between elements */
+  }
+  
+  .ContactCard p {
+    margin-bottom: 10px;
+  }
+  
+  .ContactCard button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+ 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    /* Button styles on hover */
+    &:hover {
+      background-color: #0056b3;
+    }
+
+  }
+
+  /* Add margin between buttons */
+.ContactCard .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ContactCard .button-container button {
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+  
+
